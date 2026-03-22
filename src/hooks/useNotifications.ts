@@ -11,7 +11,7 @@ export function useNotifications() {
       const permission = await Notification.requestPermission();
       if (permission === 'granted') {
         const token = await getToken(messaging, {
-          vapidKey: 'BIsS8C1Zp1-3Vf7s2q_7Q4-Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9' // Replace with your VAPID key if needed
+          vapidKey: import.meta.env.VITE_FCM_VAPID_KEY
         });
         if (token) {
           console.log('FCM Token:', token);

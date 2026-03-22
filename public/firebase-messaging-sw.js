@@ -4,13 +4,13 @@ importScripts('https://www.gstatic.com/firebasejs/11.0.0/firebase-messaging-comp
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB5q5nE4swyB5a-reuSJwZoQ8EU83YO2OA",
-  authDomain: "meddash-346ed.firebaseapp.com",
-  projectId: "meddash-346ed",
-  storageBucket: "meddash-346ed.firebasestorage.app",
-  messagingSenderId: "577746419229",
-  appId: "1:577746419229:web:d684c4af2ba002861250f4",
-  measurementId: "G-FP0Q18E6L1"
+  apiKey: VITE_FIREBASE_API_KEY_PLACEHOLDER,
+  authDomain: VITE_FIREBASE_AUTH_DOMAIN_PLACEHOLDER,
+  projectId: VITE_FIREBASE_PROJECT_ID_PLACEHOLDER,
+  storageBucket: VITE_FIREBASE_STORAGE_BUCKET_PLACEHOLDER,
+  messagingSenderId: VITE_FIREBASE_MESSAGING_SENDER_ID_PLACEHOLDER,
+  appId: VITE_FIREBASE_APP_ID_PLACEHOLDER,
+  measurementId: VITE_FIREBASE_MEASUREMENT_ID_PLACEHOLDER
 };
 
 // Initialize the Firebase app in the service worker

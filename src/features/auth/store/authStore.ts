@@ -35,7 +35,7 @@ export const useAuthStore = create<AuthState>()(
         set({ isLoading: true, error: null });
         
         // Demo Bypass for Preview
-        if (email === 'admin@meddash.io' && pass === 'admin123') {
+        if (email === import.meta.env.VITE_DEMO_ADMIN_EMAIL && pass === import.meta.env.VITE_DEMO_ADMIN_PASSWORD) {
           await new Promise(resolve => setTimeout(resolve, 800)); // Simulate network
           set({
             user: { uid: 'demo-user-id', email: 'admin@meddash.io', displayName: 'Demo Admin' },
