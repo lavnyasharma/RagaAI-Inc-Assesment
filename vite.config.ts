@@ -37,10 +37,6 @@ export default defineConfig(({ mode }) => {
           });
         },
         // Handle build mode
-        generateBundle(_, bundle) {
-          // This only works if the file is in the bundle. 
-          // Since it's in public, we need to handle it in closeBundle or use a different approach.
-        },
         async closeBundle() {
           const fs = await import('fs');
           const path = await import('path');
