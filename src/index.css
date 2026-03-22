@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+/* ============================================
+   MedDash Refined — Modern SaaS Design System
+   Linear / Stripe / Vercel Aesthetic
+   ============================================ */
+
+@theme {
+  /* Nuanced Neutrals (Zinc/Slate) */
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+
+  /* Primary Brand Refinement (Cyan/Indigo) */
+  --color-primary-50: #ecfeff;
+  --color-primary-500: #06b6d4;
+  --color-primary-600: #0891b2;
+  --color-primary-700: #0e7490;
+
+  /* Semantic Refinement */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
+
+  /* Shadows (Tiered) */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* Radius */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  /* Spacing */
+  --spacing-px: 1px;
+  --spacing-0-5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1-5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-2-5: 0.625rem;
+  --spacing-3: 0.75rem;
+  --spacing-3-5: 0.875rem;
+  --spacing-4: 1rem;
+}
+
+/* ============================================
+   Base Layer
+   ============================================ */
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-zinc-950);
+  color: var(--color-zinc-100);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   Refined Utilities
+   ============================================ */
+
+/* Surface / Card Foundations */
+.surface-glass {
+  background-color: var(--color-zinc-900);
+  border: 1px solid var(--color-zinc-800);
+}
+
+.surface-card {
+  background-color: var(--color-zinc-900);
+  border: 1px solid var(--color-zinc-800);
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.surface-card-hover:hover {
+  border-color: var(--color-zinc-700);
+  background-color: #1c1c1f;
+}
+
+/* Borders & Dividers */
+.border-refined {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.divide-refined > * + * {
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Focus Rings */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500;
+}
+
+/* Interactive Hover States */
+.interactive-hover {
+  @apply transition-colors duration-150 hover:bg-zinc-800/50;
+}
+
+/* Shimmer / Loading Skeleton */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-zinc-900) 25%,
+    var(--color-zinc-800) 50%,
+    var(--color-zinc-900) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Premium Gradient Text */
+.text-gradient {
+  @apply text-primary-500 font-bold;
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  @apply transition-colors duration-150 ease-in-out;
+}
